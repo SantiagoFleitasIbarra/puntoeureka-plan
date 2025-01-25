@@ -1,0 +1,85 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto Eureka - Clases Online de Matemática, Física, Programación y Administración</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles-plan.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">Punto Eureka</h1>
+    </div>
+    <div class="container">
+        <h2 class="section-title">Nuestros Planes de Estudio</h2>
+        
+        <div class="planes-container">
+            <div class="plan">
+                <div class="plan-header">
+                    <h2>Plan Alumno Avanzado</h2>
+                </div>
+                <div class="plan-body">
+                    <div class="beneficios">
+                        <ul>
+                            <li> Material didáctico completo</li>
+                            <li> Clases grabadas</li>
+                        </ul>
+                    </div>
+                    <div class="precio">
+                        <span id="precio-avanzado-uy">1500 UYU</span>
+                        <div class="moneda-selector">
+                            <select onchange="convertirMoneda('avanzado')">
+                                <option value="UYU">Pesos Uruguayos</option>
+                                <option value="USD">Dólares</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="botones-pago">
+                        <a href="https://www.mercadopago.com/tu-link-de-pago-avanzado" class="btn mercadopago">
+                            Suscribirse con Mercado Pago
+                        </a>
+                        <a href="https://www.paypal.com/tu-link-de-pago-avanzado" class="btn paypal">
+                            Suscribirse con PayPal
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan destacado">
+                <div class="plan-header">
+                    <h2>Plan Alumno Experto</h2>
+                </div>
+                <div class="plan-body">
+                    <div class="beneficios">
+                        <ul>
+                            <li> Material didáctico completo</li>
+                            <li> Clases grabadas</li>
+                            <li> 2 Clases presenciales semanales</li>
+                        </ul>
+                    </div>
+                    <div class="precio">
+                        <span id="precio-experto-uy">2000 UYU</span>
+                        <div class="moneda-selector">
+                            <select onchange="convertirMoneda('experto')">
+                                <option value="UYU">Pesos Uruguayos</option>
+                                <option value="USD">Dólares</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="botones-pago">
+                        <a href="https://www.mercadopago.com/tu-link-de-pago-experto" class="btn mercadopago">
+                            Suscribirse con Mercado Pago
+                        </a>
+                        <a href="https://www.paypal.com/tu-link-de-pago-experto" class="btn paypal">
+                            Suscribirse con PayPal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/currency.js"></script>
+</body>
+</html>

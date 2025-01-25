@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.header {
+    width: 100%;
+    background-color: #fafafa;
+    color: white;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #818cf8;
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1200px;
+}
+
+.section-title {
+    color: #2c3e50;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 2rem;
+}
+
+.planes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plan {
+    margin-top: 2rem;
+    flex: 0 1 350px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.plan-header {
+    background-color: #f0f0f0;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.plan-header h2 {
+    color: #2c3e50;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.plan-body {
+    padding: 20px;
+}
+
+.plan.destacado {
+    border: 2px solid #818cf8;
+}
+
+.beneficios ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.beneficios li {
+    margin: 10px 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beneficios li::before {
+    content: '✓';
+    color: #2196F3;
+    margin-right: 10px;
+}
+
+.precio {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #4f46e5;
+}
+
+.moneda-selector {
+    margin-top: 10px;
+}
+
+.moneda-selector select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #4f46e5;
+    border-radius: 4px;
+}
+
+.botones-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.btn.mercadopago {
+    background-color: #009EE3;
+}
+
+.btn.paypal {
+    background-color: #003087;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .planes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .plan {
+        width: 95%;
+        margin: 10px 0;
+    }
+
+    .precio {
+        font-size: 20px;
+    }
+
+    .moneda-selector select {
+        width: 100%;
+    }
+}
